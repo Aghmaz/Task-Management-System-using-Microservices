@@ -1,0 +1,42 @@
+{
+  "name": "task-management-system-using-microservices",
+  "version": "1.0.0",
+  "description": "A comprehensive task management system built with microservices architecture using Express.js, MongoDB, PostgreSQL, Docker, and JWT authentication",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:gateway\" \"npm run dev:auth\" \"npm run dev:task\" \"npm run dev:notification\" \"npm run dev:reporting\" \"npm run dev:admin\"",
+    "dev:gateway": "cd api-gateway && npm run dev",
+    "dev:auth": "cd auth-service && npm run dev",
+    "dev:task": "cd task-service && npm run dev",
+    "dev:notification": "cd notification-service && npm run dev",
+    "dev:reporting": "cd reporting-service && npm run dev",
+    "dev:admin": "cd admin-service && npm run dev",
+    "install:all": "npm install && cd api-gateway && npm install && cd ../auth-service && npm install && cd ../task-service && npm install && cd ../notification-service && npm install && cd ../reporting-service && npm install && cd ../admin-service && npm install",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aghmaz/Task-Management-System-using-Microservices.git"
+  },
+  "keywords": [
+    "microservices",
+    "task-management",
+    "express",
+    "mongodb",
+    "postgresql",
+    "docker",
+    "jwt",
+    "nodejs"
+  ],
+  "author": "aghmaz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aghmaz/Task-Management-System-using-Microservices/issues"
+  },
+  "homepage": "https://github.com/Aghmaz/Task-Management-System-using-Microservices#readme",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
