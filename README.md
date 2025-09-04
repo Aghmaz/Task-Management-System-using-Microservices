@@ -13,6 +13,14 @@ The system is built using a microservices architecture with the following compon
 - **Reporting Service** (Port 3004) - Generates reports and analytics
 - **Admin Service** (Port 3005) - Manages system administration and user management
 
+## 🖼️ Diagrams
+
+![System Design](system-design.png)
+
+![Database Design](Database-design.png)
+
+![Architecture Diagram](architect-design.png)
+
 ## 🚀 Features
 
 ### Core Features
